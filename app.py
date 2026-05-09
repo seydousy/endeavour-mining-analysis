@@ -12,7 +12,7 @@ warnings.filterwarnings('ignore')
 # ─── PAGE CONFIG ───────────────────────────────────────────────
 st.set_page_config(
     page_title="Endeavour Mining — Analytics Dashboard",
-    page_icon="⛏️",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -353,7 +353,7 @@ PLOTLY_LAYOUT = dict(
 with st.sidebar:
     st.markdown("""
     <div style='text-align:center; padding: 1rem 0;'>
-        <div style='font-size:2rem;'>⛏️</div>
+        <div style='font-size:2rem;'></div>
         <div style='font-family: Space Mono; font-size:0.65rem; color:#AAAACC; letter-spacing:0.1em;'>
         ENDEAVOUR MINING<br>ANALYTICS DASHBOARD
         </div>
@@ -362,12 +362,12 @@ with st.sidebar:
     st.divider()
     st.markdown("<div style='font-size:0.7rem; color:#666; font-family:Space Mono; text-transform:uppercase; letter-spacing:0.1em;'>Navigation</div>", unsafe_allow_html=True)
     page = st.radio("", [
-        "🏠 Vue Générale",
-        "⛏️ Opérationnel",
-        "💰 Financier",
-        "🪨 Réserves & Mine Life",
-        "🤖 Prédiction ML",
-        "💡 Capex & Stratégie"
+        "Vue Générale",
+        "Opérationnel",
+        "Financier",
+        "Réserves & Mine Life",
+        "Prédiction ML",
+        "Capex & Stratégie"
     ], label_visibility="collapsed")
     st.divider()
     st.markdown("<div style='font-size:0.65rem; color:#8888AA; font-family:Space Mono;'>Source: EDV Annual Reports 2024-2025<br>Réalisé avec Python + Streamlit</div>", unsafe_allow_html=True)
@@ -392,7 +392,7 @@ def card(val, label, delta=None, delta_positive=True):
 # ══════════════════════════════════════════════════════════════
 # PAGE: VUE GÉNÉRALE
 # ══════════════════════════════════════════════════════════════
-if page == "🏠 Vue Générale":
+if page == "Vue Générale":
     st.markdown("""
     <div class="hero-banner">
         <div class="hero-title">Endeavour Mining — Analytics 2025</div>
@@ -446,7 +446,7 @@ if page == "🏠 Vue Générale":
 # ══════════════════════════════════════════════════════════════
 # PAGE: OPÉRATIONNEL
 # ══════════════════════════════════════════════════════════════
-elif page == "⛏️ Opérationnel":
+elif page == "Opérationnel":
     st.markdown("<div class='hero-banner'><div class='hero-title'>Analyse Opérationnelle</div><div class='hero-sub'>Grade · Recovery · Strip Ratio · Efficacité métallurgique</div></div>", unsafe_allow_html=True)
 
     tab1, tab2, tab3, tab4 = st.tabs(["Grade vs Production", "Recovery Rate", "Strip Ratio", "Analyse Trimestrielle"])
@@ -533,7 +533,7 @@ elif page == "⛏️ Opérationnel":
 # ══════════════════════════════════════════════════════════════
 # PAGE: FINANCIER
 # ══════════════════════════════════════════════════════════════
-elif page == "💰 Financier":
+elif page == "Financier":
     st.markdown("<div class='hero-banner'><div class='hero-title'>Analyse Financière</div><div class='hero-sub'>AISC · Rentabilité · Free Cash Flow · Revenue par Mine</div></div>", unsafe_allow_html=True)
 
     tab1, tab2, tab3 = st.tabs(["AISC & Rentabilité", "Revenue par Mine", "Cash Flow"])
@@ -627,7 +627,7 @@ elif page == "💰 Financier":
 # ══════════════════════════════════════════════════════════════
 # PAGE: RÉSERVES & MINE LIFE
 # ══════════════════════════════════════════════════════════════
-elif page == "🪨 Réserves & Mine Life":
+elif page == "Réserves & Mine Life":
     st.markdown("<div class='hero-banner'><div class='hero-title'>Réserves & Mine Life</div><div class='hero-sub'>Durée de vie · Qualité des gisements · Risque d'épuisement</div></div>", unsafe_allow_html=True)
 
     # Mine life calculation
@@ -704,7 +704,7 @@ elif page == "🪨 Réserves & Mine Life":
 # ══════════════════════════════════════════════════════════════
 # PAGE: PRÉDICTION ML
 # ══════════════════════════════════════════════════════════════
-elif page == "🤖 Prédiction ML":
+elif page == "Prédiction ML":
     st.markdown("<div class='hero-banner'><div class='hero-title'>Prédiction Machine Learning</div><div class='hero-sub'>Régression · Forecast 2026 · Comparaison vs Guidance</div></div>", unsafe_allow_html=True)
 
     st.markdown("""
@@ -822,7 +822,7 @@ elif page == "🤖 Prédiction ML":
 # ══════════════════════════════════════════════════════════════
 # PAGE: CAPEX & STRATÉGIE
 # ══════════════════════════════════════════════════════════════
-elif page == "💡 Capex & Stratégie":
+elif page == "Capex & Stratégie":
     st.markdown("<div class='hero-banner'><div class='hero-title'>Capex & Stratégie d'Investissement</div><div class='hero-sub'>Allocation du capital · Exploration → Réserves · 2025 vs 2026</div></div>", unsafe_allow_html=True)
 
     tab1, tab2, tab3 = st.tabs(["Allocation 2025", "2025 vs 2026 Guide", "Exploration → Réserves"])
